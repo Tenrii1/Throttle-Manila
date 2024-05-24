@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: blur(10px);
+            background: url('BG.gif') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #F6F0F2;
+            color: rgb(19, 15, 15);
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .VROOM img {
+            height: 150px; 
+            width: 300px; 
+        }
+
+        header nav {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            background-color: #8d3f08;
+            border: 1px solid #333;
+            margin-top: 1px;
+        }
+
+        header:hover nav {
+            display: flex;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: rgb(247, 239, 239);
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            display: block;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            background-color: #F6F0F2;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #fff;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #AD6649;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .interactive-section {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .interactive-section:hover {
+            transform: scale(1.02);
+            background-color: linear-gradient(45deg, #e44a23, #da7f3a);
+        }
+
+        .interactive-section h2 {
+            margin-top: 0;
+        }
+
+        .values {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .value-item {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #8d3f08;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        p2{
+            color: white ;
+        }
+
+        .cart-logo {
+        position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+    }
+
+    .cart-logo img{
+      height: 50px;
+      padding-left: 10px;
+    }
+
+    .quantity{
+        background: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        left: 80%;
+        padding: 3px 10px;
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="VROOM">
+            <a href="Thrttl Mnl- Home Page.html">
+                <img src="Throttle Manila Logo.png" alt="Throttle Manila Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Throttle Manila - About Us.html">About Us</a></li>
+                <li><a href="Throttle Manila - Our Works.html">Our Works</a></li>
+                <li><a href="Throttle Manila - Contact Us.html">Contact Us</a></li>
+                <li><a href="Throttle Manila - Registration.html">Registration</a></li>
+                <div class="cart-logo openShopping">
+                    <a href = "ourworks.html">
+                      <img src="Cart Logo.png" alt="Cart Logo">
+                    </a>
+                    <span class="quantity">0</span>
+                  </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="background-image"></div>
+
+    <div class="container">
+        <h1>ABOUT US</h1>
+        <div class="interactive-section">
+            <h2>Throttle Manila</h2>
+            <p>Throttle Manila is your premier destination for luxury and high-performance supercars in the Philippines. Founded with a passion for speed, elegance, and unmatched automotive engineering, Throttle Manila is dedicated to bringing the finest selection of supercars to enthusiasts and collectors.</p>
+        </div>
+
+        <div class="interactive-section">
+            <h2>Our Mission</h2>
+            <p>At Throttle Manila, our mission is to provide exclusive access to the world’s most prestigious supercars. We aim to be the leading authority in the Philippine luxury automotive market, offering exceptional quality, unparalleled expertise, and a commitment to customer satisfaction.</p>
+        </div>
+
+        <div class="interactive-section">
+            <h2>What We Offer</h2>
+            <ul>
+                <li>Exclusive Supercars: We curate a select inventory of the most sought-after supercars, featuring brands known for their performance, design, and prestige.</li>
+                <li>Personalized Service: Our knowledgeable team offers personalized consultations to help you find the perfect supercar that matches your lifestyle and preferences.</li>
+                <li>Luxury Experience: From the moment you step into our showroom to the delivery of your vehicle, we ensure a seamless and luxurious experience.</li>
+                <li>Community and Events: Engage with a community of like-minded supercar enthusiasts through exclusive events, drives, and meetups.</li>
+            </ul>
+        </div>
+
+        <div class="interactive-section">
+            <h2>Our Values</h2>
+            <div class="values">
+                <div class="value-item">
+                    <h3>Exclusivity</h3>
+                    <p2>We offer only the most exclusive and high-performing supercars available on the market.</p2>
+                </div>
+                <div class="value-item">
+                    <h3>Excellence</h3>
+                    <p2>Our commitment to excellence drives everything we do, from customer service to the vehicles we offer.</p2>
+                </div>
+                <div class="value-item">
+                    <h3>Customer Focus</h3>
+                    <p2>Your satisfaction is our priority. We provide a tailored experience to meet your unique needs and desires.</p2>
+                </div>
+                <div class="value-item">
+                    <h3>Integrity</h3>
+                    <p2>We operate with transparency and honesty in every transaction, ensuring you can trust us with your luxury investment.</p2>
+                </div>
+            </div>
+        </div>
+
+        <div class="interactive-section">
+            <h2>Why Choose Us?</h2>
+            <p>Throttle Manila stands out for its dedication to offering the crème de la crème of the automotive world. With a deep understanding of luxury and performance, we are the go-to destination for supercar aficionados in the Philippines. Whether you are adding to your collection or purchasing your first supercar, Throttle Manila is here to make your dream a reality.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Us</title>
+
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url('Contact Us.gif') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    header {
+        background-color: #F6F0F2;
+        color: rgb(19, 15, 15);
+        padding: 10px 0;
+        text-align: center;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .VROOM img {
+        height: 150px; 
+        width: 300px; 
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: #8d3f08;
+        border: 1px solid #333;
+        margin-top: 1px;
+    }
+
+    header:hover nav {
+        display: flex;
+    }
+
+    header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    header nav ul li {
+        display: inline;
+    }
+
+    header nav ul li a {
+        color: rgb(247, 239, 239);
+        text-decoration: none;
+        font-size: 1em;
+        padding: 10px 20px;
+        transition: background-color 0.3s, color 0.3s;
+        display: block;
+        font-weight: bold;
+    }
+
+    header nav ul li a:hover {
+        background-color: #F6F0F2;
+        color: #333;
+        border-radius: 5px;
+    }
+
+  /*BODY*/
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+  /*SOCIAL*/
+  .contact-info {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .social-link {
+      display: inline-flex;
+      align-items: center;
+      margin: 10px;
+      text-decoration: none;
+      color: #f8eeee;
+      font-size: 20px;
+      font-family: Arial, sans-serif;
+      transition: color 0.3s;
+    }
+
+  .social-link img {
+      margin-right: 10px;
+  }
+
+  .social-link:hover {
+      color: #0077b5;
+  }
+
+  .cart-logo {
+        position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+    }
+
+    .cart-logo img{
+      height: 50px;
+      padding-left: 10px;
+    }
+
+    .quantity{
+        background: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        left: 80%;
+        padding: 3px 10px;
+    }
+  </style>
+</head>
+
+
+<body>
+    <div class="background-image"></div>
+
+  <header class="header">
+    <div class="VROOM">
+        <a href="Thrttl Mnl- Home Page.html">
+            <img src="Throttle Manila Logo.png" alt="Throttle Manila Logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Throttle Manila - About Us.html">About Us</a></li>
+            <li><a href="Throttle Manila - Our Works.html">Our Works</a></li>
+            <li><a href="Throttle Manila - Contact Us.html">Contact Us</a></li>
+            <li><a href="Throttle Manila - Registration.html">Registration</a></li>
+            <div class="cart-logo openShopping">
+                <a href = "ourworks.html">
+                  <img src="Cart Logo.png" alt="Cart Logo">
+                </a>
+                <span class="quantity">0</span>
+              </div>
+        </ul>
+    </nav>
+    </header>
+  <!--SOCIALS-->
+  <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <div class="contact-info">
+    <!-- Facebook -->
+    <a class="social-link" href="https://Facebook.com">
+      <img src="FB logo.png" alt="FB" width="50">
+      Facebook
+    </a>
+    <br><br><br>
+    <!-- Instagram -->
+    <a class="social-link" href="https://instagram.com">
+      <img src="IG logo.png" alt="Instagram" width="50">
+      Instagram
+    </a>
+    <br><br><br>
+    <!-- Youtube -->
+    <a class="social-link" href="https://Youtube.com">
+      <img src="YT logo.png" alt="Instagram" width="50">
+      Youtube
+    </a>
+  </div>
+</body>
+
+</html>

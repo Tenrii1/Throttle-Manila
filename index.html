@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throttle Manila!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('Banner.gif');
+            overflow: hidden;
+            position: relative;
+        }
+
+        header {
+            background-color: #F6F0F2;
+            color: rgb(19, 15, 15);
+            padding: 0, 0;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .VROOM img {
+            height: 150px; 
+            width: 300px; 
+        }
+
+        header nav {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            background-color: #8d3f08;
+            border: 1px solid #333;
+            margin-top: 1px;
+        }
+
+        header:hover nav {
+            display: flex;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: rgb(247, 239, 239);
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            display: block;
+            font-weight: bold;
+            
+        }
+
+        header nav ul li a:hover {
+            background-color: #F6F0F2;
+            color: #333;
+            border-radius: 5px;
+        }
+/*BANNER*/
+        .banner {
+            position: relative; 
+            width: 100%;
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute; 
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        h1 {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 100px;
+            z-index: 1;
+            background-image: url('Texturee.jpg'); 
+            background-size: cover;
+            background-clip: text;
+            animation: textEffect 5s infinite alternate;
+            animation: flareEffect 5s infinite alternate;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes flareEffect {
+            0% {
+                background-position: 0 0; /* Start position */
+            }
+            100% {
+                background-position: 0 -100%; /* End position */
+            }
+        }
+        
+        
+        h2 {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 250px;
+            z-index: 1;
+            color: #C8590C;
+            text-shadow: 2px 2px 2px black;
+        }
+
+
+        .Mclaren{
+            position: absolute;
+            bottom: 300px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            z-index: 1; 
+            text-align: center;
+        }
+
+        .Mclaren img {
+            width: auto;
+            height: 500px;
+        }
+/*BUTTON*/
+        .gradient-btn {
+            display: inline-block;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            background: linear-gradient(135deg, #FF8C00, #942612); 
+            background-size: 200% 200%;
+            animation: gradientAnimation 1.5s infinite alternate;
+        }
+
+        @keyframes gradientAnimation {
+            50% {
+                background-position: 0 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .cart-logo {
+        position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+    }
+
+    .cart-logo img{
+      height: 50px;
+      padding-left: 10px;
+    }
+
+    .quantity{
+        background: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        left: 80%;
+        padding: 3px 10px;
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="VROOM">
+            <a href="index.html">
+                <img src="Throttle Manila Logo.png" alt="Throttle Manila Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Throttle Manila - About Us.html">About Us</a></li>
+                <li><a href="Throttle Manila - Our Works.html">Our Works</a></li>
+                <li><a href="Throttle Manila - Contact Us.html">Contact Us</a></li>
+                <li><a href="Throttle Manila - Registration.html">Registration</a></li>
+                <div class="cart-logo openShopping">
+                    <a href = "ourworks.html">
+                      <img src="Cart Logo.png" alt="Cart Logo">
+                    </a>
+                    <span class="quantity">0</span>
+                  </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="Home Page Banner Vroom.gif">
+    </div> 
+        <h1> BACK ON TRACK</h1>
+        <h2> MCLAREN720S</h2>
+    <div class="Mclaren">
+        <img src="Home Page Banner Car.png">
+        <a href="Throttle Manila - Our Works.html" class="gradient-btn">Check Out</a>
+    </div>
+   
+
+</body>
+</html>

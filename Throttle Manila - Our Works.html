@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Works</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('Banner.gif');
+            overflow: hidden;
+            position: relative;
+        }
+
+        header {
+            background-color: #F6F0F2;
+            color: rgb(19, 15, 15);
+            padding: 0, 0;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .VROOM img {
+            height: 150px; 
+            width: 300px; 
+        }
+
+        header nav {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            background-color: #8d3f08;
+            border: 1px solid #333;
+            margin-top: 1px;
+        }
+
+        header:hover nav {
+            display: flex;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        header nav ul li {
+            display: inline;
+            position: relative;
+        }
+
+        header nav ul li a {
+            color: rgb(247, 239, 239);
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            display: block;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            background-color: #F6F0F2;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        h1 {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            color: #C8590C;
+            text-align: center;
+        }
+
+    /*Cart*/
+    .cart-logo {
+        position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+    }
+
+    .cart-logo img{
+      height: 50px;
+      padding-left: 10px;
+    }
+
+    .quantity{
+        background: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        top: -5px;
+        left: 80%;
+        padding: 3px 10px;
+    }
+        
+    /*Order*/
+    .main-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+      }
+      
+      .title{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 70px;
+        color:  #C8590C;
+        text-align: center;
+      }
+  
+      .items-container {
+        flex: 3;
+      }
+  
+      .card {
+        margin: 20px;
+        box-shadow: rgba(78, 78, 78, 0.2) 0px 2px 8px 0px;
+        background: #C9CCD3;
+        background-image: linear-gradient(to right, #868f96 0%, #9fa6a9 100%);
+        color: rgb(255, 255, 255);
+        border: none;
+    }
+  
+    .cart-container {
+      flex: 1;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      height: 750px;
+      margin-left: 20px;
+      border-radius: 10px;
+      background-image: linear-gradient(to bottom right, #d8a65a, #341B19);
+      padding: 40px;
+      
+    }
+  
+    .cart {
+        height: 76%;
+    }
+  
+    .list-group, .cart-list{
+      margin-left: 1px;
+      margin-right: 2px;
+    }
+  
+    .check-out p {
+        font-weight: bold;
+        border-bottom: 1px solid rgb(200, 200, 200);
+        padding: 0px 10px 10px 10px;
+    }
+  
+    .check-out span {
+        font-weight: 100;
+        border-bottom: 1px solid rgb(200, 200, 200);
+        padding: 0px 10px 10px 10px;
+  }
+  
+  
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+  
+    }
+  
+    .buttons .btn-danger {
+      display: center;
+      margin-right: 40px;
+      width: 225%;
+      height: 190%;
+      background-color:  #b87337;
+      color: #cdcaca;
+      border-width: 0.1px;
+      border-color: #cdcaca;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  
+    .buttons .btn-secondary {
+      display: Center;
+      margin-left: 190.5px;
+      width: 60%;
+      height: 190%;
+      background-color: #e5e3e3;
+      color: #b87337;
+      border-width: 0.1px;
+      border-color: #cdcaca;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  
+    .list-group-item {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        border-top: 0.5px solid rgb(212, 210, 210);
+        border-bottom: 0.5px solid rgb(212, 210, 210);
+        margin: 1px 2px;
+        padding: 10px;
+    }
+  
+    .list-group-item div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+  
+    .list-group-item div button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: rgb(177, 14, 14);
+        padding-right: 55px;
+        margin-left: 5px;
+        color: rgb(255, 255, 255);
+    }
+  
+  /*BODY*/
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+  
+  /*CAR*/
+      .label{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 50px;
+        font-weight: lighter;
+        color: #f8f4f2;
+        text-align: center;
+      }
+  
+      .small-container {
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        
+  
+      }
+      .row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        flex-wrap: center;
+        justify-content: space-around;
+     }
+  
+      .col-2{
+        flex-basis: 41%;
+        min-width: 20px;
+      }
+     
+      .album {
+          flex: 1 1 calc(25% - 20px);
+          display: inline-block;
+          margin-bottom: 50px;   
+          transition: transform 0.5;
+          font-size: 14px;
+          font-family: Arial, Helvetica, sans-serif; 
+          color: white;
+      }
+  
+      .album img {
+          max-width: 70%;
+          padding: 10px 0;
+      }
+  
+      .album:hover img {
+        transform: rotate(500deg);
+        transition: transform 10s ease;
+      }
+  
+      .album h4 {
+        margin-bottom: 5px;
+      }
+  
+      .album p {
+          margin-top: 5px;
+      }
+  
+      .album button {
+          display: center;
+          width: 50%;
+          padding: 10px;
+          background-color: #e5e3e3;
+          color:#8C5444;
+          border-width: 0.5px;
+          border-color: #cdcaca;
+          cursor: pointer;
+          font-size: 14px;
+       }
+  
+       .album button:hover {
+         background-color: #c2735e;
+      }
+  
+      .album:hover img {
+        transform: scale(1.1); 
+        transition: transform 5s ease
+      }
+  
+      .p-2{
+        color: #D9D9D9;
+      }
+  /*RECEIPT*/
+      .receipt-modal {
+        position: fixed; 
+        z-index: 1000; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+       
+      }
+  
+  
+      .receipt-content {
+        background-image: url('Receipt.jpg');
+        background-size: cover;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%; 
+        height: 750px;
+        color: white;
+      }
+  
+      .receipt-content input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+  
+      /* Close button */
+      .close-button {
+        background-color: #f44336;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        float: right;
+      }
+  
+      .close-button:hover,
+      .close-button:focus {
+        background-color: #d32f2f;
+      }
+  
+      .receipt-heading{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 50px ;
+        text-align: center;
+        
+      }
+  
+      hr {
+        margin: 20px 0;
+      }
+      
+      #orderList {
+        font-family: monospace;
+        width: 100%;
+        border-collapse: collapse; 
+        margin-top: 20px; 
+        
+      }
+      
+      #orderList th, #orderList td {
+        font-family: monospace;
+        border: none;
+        padding: 8px;
+        text-align: left; 
+      }
+      
+      #orderList th {
+        color: white;
+        font-size: 20px;
+      }
+  
+      .TY{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 0px;
+      }
+      .center-text{
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        text-align: center;
+      }
+
+
+</style>
+</head>
+    <body>
+        <header class="header">
+            <div class="VROOM">
+                <a href="Thrttl Mnl- Home Page.html">
+                    <img src="Throttle Manila Logo.png" alt="Throttle Manila Logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Throttle Manila - About Us.html">About Us</a></li>
+                    <li><a href="Throttle Manila - Our Works.html">Our Works</a></li>
+                    <li><a href="Throttle Manila - Contact Us.html">Contact Us</a></li>
+                    <li><a href="Throttle Manila - Registration.html">Registration</a></li>
+                    <div class="cart-logo openShopping">
+                        <a href = "ourworks.html">
+                          <img src="Cart Logo.png" alt="Cart Logo">
+                        </a>
+                        <span class="quantity">0</span>
+                      </div>
+                </ul>
+                
+            </nav>
+        </header>
+
+        <div class="main-container">
+        <!--PRODUCTS-->
+        <div class="items-container">
+          <div class="title">Our Works</div> <hr>
+          <div class="items">
+            <div class="row">
+              <div class="album">
+                <img src="Corvette C8.png">
+                <h4>Corvette C8 </h4>
+                <p>₱ 12,572,000 Million</p>
+                <button onclick="addToCart(0)">Add to Cart</button>
+              </div>
+    
+              <div class="album">
+                <img src="Larborghini Huracan.png">
+                <h4> Huracan </h4>
+                <p>₱  22,000,000 Million</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+              </div>
+    
+              <div class="album">
+                <img src="Porsche 911 GT3 RS.png">
+                <h4>911 GT3 RS</h4>
+                <p>₱ 14,000,000 Million </p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+              </div>
+    
+              <div class="album">
+                <img src="Ferrari 458 spider.png">
+                <h4>Ferrari 458 spider </h4>
+                <p>₱ 14,466,095 Million  </p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+              </div>
+    
+              <div class="album">
+                <img src="Dodge Challenger.png">
+                <h4>Dodge Challenger </h4>
+                <p>₱ 5,780,000 Million </p>
+                <button onclick="addToCart(4)">Add to Cart</button>
+              </div>
+    
+              <div class="album">
+                <img src="Lotus Evora.png">
+                <h4>Lotus Evora</h4>
+                <p>₱8,880,000 Million </p>
+                <button onclick="addToCart(5)">Add to Cart</button>
+              </div>
+    
+              <div class="album">
+                <img src="McLaren 720S.png">
+                <h4>McLaren 720S</h4>
+                <p>₱ 17,297,500 Million  </p>
+                <button onclick="addToCart(6)">Add to Cart</button>
+              </div>
+    
+              <div class="album">
+                <img src="Aston Martin Valkyrie.png">
+                <h4> Aston Martin Valkyrie</h4>
+                <p>₱ 178,750,000 Million </p>
+                <button onclick="addToCart(7)">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+    
+        <!--CART-->
+        <div class="cart-container">
+          <div class="cart">
+            <h4>Cart</h4>
+            <ul class="list-group cart-list"></ul>
+          </div>
+          <div class="check-out">
+            <p>Subtotal: <span class="subtotal float-right">0</span></p>
+            <p>Tax(12%): <span class="tax float-right">0</span></p>
+            <p>Total: <span class="total float-right">0</span></p>
+            <div class="buttons row">
+              <button class="btn btn-danger form-control col-5">Check Out</button>
+              <button class="btn btn-secondary form-control col-5" onclick="clearCart()">Clear All</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!--RECEIPT-->
+      <div id="receiptModal" class="receipt-modal" style="display: none;">
+        <div class="receipt-content">
+          <div class="receipt-heading">
+            <h2>RECEIPT</h2>
+          </div><hr>
+          <table id="orderList">
+            <thead>
+              <tr>
+                <th>Qty</th>
+                <th>Album</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+          <hr>
+          <p><strong>Total Amount:</strong> <span id="totalAmount"></span></p>
+          <p><strong>Enter Amount:</strong> <input type="number" id="cashInput" placeholder="Enter cash amount"></p>
+          <p><strong>Cash:</strong> <span id="cash"></span></p>
+          <p><strong>Change:</strong> <span id="change"></span></p>
+          <hr>
+          <div class="TY">
+            <h1>
+              Thank You!
+            </h1>
+          </div>
+          <div class="center-text">
+              <p> for choosing The Vault where all your treasures are locked away. </p>
+          </div>
+          <button class="close-button">Close</button>
+        </div>
+      </div>
+    </body>
+</html>
+
+<script>
+    let cart = [];
+
+function addToCart(index) {
+    let product = products[index];
+    cart.push(product);
+    updateCart();
+}
+
+
+let products = [
+    { id: 1, name: 'Corvette C8', price: 12572000},
+    { id: 2, name: 'Larborghini Huracan', price: 22000000},
+    { id: 3, name: 'Porsche 911 GT3 RS',  price: 14000000 },
+    { id: 4, name: 'Ferrari 458 spider', price: 14466095 },
+    { id: 5, name: 'Dodge Challenger', price: 5780000 },
+    { id: 6, name: 'Lotus Evora', price: 8880000 },
+    { id: 7, name: 'McLaren 720S', price: 17297500 },
+    { id: 8, name: 'Aston Martin Valkyrie', price: 178750000 },
+];
+
+function updateCart() {
+    let cartList = document.querySelector('.cart-list');
+    cartList.innerHTML = '';
+    let subtotal = 0;
+    cart.forEach((item, index) => {
+        let li = document.createElement('li');
+        li.classList.add('list-group-item');
+        li.innerHTML = `
+            <div>${item.name}</div>
+            <div>₱${item.price.toFixed(2)}</div>
+            <div><button onclick="removeFromCart(${index})">Remove</button></div>
+        `;
+        cartList.appendChild(li);
+        subtotal += item.price;
+    });
+    document.querySelector('.subtotal').textContent = subtotal.toFixed(2);
+    document.querySelector('.tax').textContent = (subtotal * 0.12).toFixed(2);
+    document.querySelector('.total').textContent = (subtotal * 1.12).toFixed(2);
+    document.querySelector('.quantity').textContent = cart.length;
+}
+
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
+function clearCart() {
+    cart = [];
+    updateCart();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateCart();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.btn-danger').addEventListener('click', () => {
+        if (cart.length > 0) {
+            // Display the receipt modal
+            document.getElementById('receiptModal').style.display = 'block';
+            // Populate the receipt
+            let orderList = document.querySelector('#orderList tbody');
+            orderList.innerHTML = '';
+            cart.forEach(item => {
+                let row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>1</td>
+                    <td>${item.name}</td>
+                    <td>₱${item.price.toFixed(2)}</td>
+                `;
+                orderList.appendChild(row);
+            });
+            let totalAmount = cart.reduce((total, item) => total + item.price, 0) * 1.12;
+            document.getElementById('totalAmount').textContent = `₱${totalAmount.toFixed(2)}`;
+            document.getElementById('cash').textContent = '';
+            document.getElementById('change').textContent = '';
+        } else {
+            alert('Your cart is empty');
+        }
+    });
+
+    document.getElementById('cashInput').addEventListener('input', () => {
+        let totalAmount = parseFloat(document.getElementById('totalAmount').textContent.replace('₱', ''));
+        let cash = parseFloat(document.getElementById('cashInput').value);
+        document.getElementById('cash').textContent = `₱${cash.toFixed(2)}`;
+        let change = cash - totalAmount;
+        document.getElementById('change').textContent = change >= 0 ? `₱${change.toFixed(2)}` : 'Insufficient cash';
+    });
+
+    document.querySelector('.close-button').addEventListener('click', () => {
+        document.getElementById('receiptModal').style.display = 'none';
+    });
+});
+
+</script>
